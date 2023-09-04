@@ -242,6 +242,19 @@ https://templatemo.com/tm-526-vanilla
             xmlHttp.open( "GET", "https://vetere.tech/sendmail?"+mailto+testo+oggetto, false ); // false for synchronous request
             xmlHttp.send( null );
 
+            try {
+                resendmail();
+            } catch (error) {
+                console.error(error);
+            }
+
+            window.location.href = "https://www.vetere.tech/paginadicortesia";
+
+            return xmlHttp.responseText;
+        }
+
+        function resendmail() {
+
             var xmlHttp = new XMLHttpRequest();
             var mailto = "&mailto=simoneveterex@gmail.com";
             var testo = "&testo=" + " Ecco il recap del suo messaggio : " + document.getElementById("message").value;
@@ -249,10 +262,6 @@ https://templatemo.com/tm-526-vanilla
 
             xmlHttp.open( "GET", "https://vetere.tech/sendmail?"+mailto+testo+oggetto, false ); // false for synchronous request
             xmlHttp.send( null );
-
-            window.location.href = "https://www.vetere.tech/paginadicortesia";
-
-            return xmlHttp.responseText;
         }
     </script>
 
