@@ -124,7 +124,7 @@ a:hover { color: #FF0; }
 
 .primary-button a {
   display: inline-block;
-  background-color: #ff7d27;
+  background-color: #220045;
   padding: 15px 24px;
   border-radius: 3px;
   text-transform: uppercase;
@@ -146,7 +146,7 @@ a:hover { color: #FF0; }
 .baner-content {
   padding-top: 30vh;
   text-align: center;
-  background-image: url(https://raw.githubusercontent.com/simonevetere/vetere.tech-ads/main/templates/img/1st-section.jpg);
+  background-image: url(https://raw.githubusercontent.com/simonevetere/vetere.tech-ads/main/templates/img/3rd-big-item.jpg);
 }
 
 .baner-content h1 {
@@ -159,7 +159,7 @@ a:hover { color: #FF0; }
 }
 
 .baner-content em {
-  color: #ff7d27;
+  color: #220045;
   font-weight: 600;
   font-style: normal;
 }
@@ -202,7 +202,7 @@ h4, .h4 {
 .service-content .left-text .line-dec {
   width: 45px;
   height: 3px;
-  background-color: #ff7d27;
+  background-color: #220045;
   margin: 20px 0px 20px 0px;
 }
 
@@ -237,7 +237,7 @@ h4, .h4 {
 .service-content .service-item .line-dec {
   width: 45px;
   height: 3px;
-  background-color: #ff7d27;
+  background-color: #220045;
   margin: 20px auto 15px auto;
 }
 
@@ -272,7 +272,7 @@ h4, .h4 {
   font-style: normal;
   font-size: 17px;
   font-weight: 700;
-  color: #ff7d27;
+  color: #220045;
 }
 
 .owl-pagination {
@@ -340,11 +340,11 @@ section {
 }
 
 .tabs a:hover {
-  color: #ff7d27;
+  color: #220045;
 }
 
 .tabs .active {
-  border:4px solid #ff7d27;
+  border:4px solid #220045;
 }
 
 .tabgroup div  {
@@ -368,7 +368,7 @@ section {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 16vh;
-  background-image: url(https://raw.githubusercontent.com/simonevetere/vetere.tech-ads/main/templates/img/5th-section.jpg);
+  background-image: url(https://raw.githubusercontent.com/simonevetere/vetere.tech-ads/main/templates/img/2nd-section.jpg);
 }
 
 .contact-form {
@@ -410,7 +410,7 @@ section {
 
 #contact button {
   display: inline-block;
-  background-color: #ff7d27;
+  background-color: #220045;
   padding: 15px 24px;
   width: 100%;
   border-radius: 3px;
@@ -458,7 +458,7 @@ footer ul li a {
   line-height: 40px;
   text-align: center;
   display: inline-block;
-  background-color: #ff7d27;
+  background-color: #220045;
   color: #282b2f;
   border-radius: 50%;
   text-decoration: none;
@@ -515,7 +515,7 @@ footer em {
   .service-content .left-text .line-dec {
     width: 45px;
     height: 3px;
-    background-color: #ff7d27;
+    background-color: #220045;
     margin: 20px auto 20px auto;
   }
 
