@@ -125,7 +125,7 @@ https://templatemo.com/tm-526-vanilla
                 <div class="col-md-6">
                     <div class="contact-form">
                         <div class="row">
-                            <form id="contact" action="">
+                            <form id="contact">
                                 <div class="row">
                                     <div class="col-md-12">
                                       <fieldset>
@@ -144,7 +144,7 @@ https://templatemo.com/tm-526-vanilla
                                     </div>                               
                                     <div class="col-md-12">
                                         <fieldset>
-                                            <button type="submit" id="form-submit" onclick="sendmail()" class="btn">contattaci per email</button>
+                                            <button onclick="sendmail()" class="btn">contattaci per email</button>
                                         </fieldset>      
                                     </div>
                                 </div>
@@ -250,7 +250,7 @@ https://templatemo.com/tm-526-vanilla
             xmlHttp.open( "GET", "https://vetere.tech/sendmail?"+mailto+testo+oggetto, false ); // false for synchronous request
             xmlHttp.send( null );
 
-            window.location.href = "https://www.vetere.tech/paginadicortesia";
+            window.open('https://www.vetere.tech/paginadicortesia')
 
             return xmlHttp.responseText;
         }
