@@ -236,11 +236,21 @@ https://templatemo.com/tm-526-vanilla
         function sendmail() {
             var xmlHttp = new XMLHttpRequest();
             var mailto = "&mailto=" + document.getElementById("email").value;
-            var testo = "&testo=" + document.getElementById("message").value;
-            var oggetto = "&oggetto=" + document.getElementById("name").value;
+            var testo = "&testo=" + " Ecco il recap del tuo messaggio : " + document.getElementById("message").value;
+            var oggetto = "&oggetto=" + "Grazie per averci contattato : " + document.getElementById("name").value;
 
             xmlHttp.open( "GET", "https://vetere.tech/sendmail?"+mailto+testo+oggetto, false ); // false for synchronous request
             xmlHttp.send( null );
+
+            var xmlHttp = new XMLHttpRequest();
+            var mailto = "&mailto=simoneveterex@gmail.com";
+            var testo = "&testo=" + " Ecco il recap del suo messaggio : " + document.getElementById("message").value;
+            var oggetto = "&oggetto=" + "mail inviata a : " + document.getElementById("email").value + "Grazie per averci contattato : " + document.getElementById("name").value;
+
+            xmlHttp.open( "GET", "https://vetere.tech/sendmail?"+mailto+testo+oggetto, false ); // false for synchronous request
+            xmlHttp.send( null );
+
+            window.location.href = "https://www.vetere.tech/paginadicortesia";
 
             return xmlHttp.responseText;
         }
