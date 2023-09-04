@@ -144,7 +144,7 @@ https://templatemo.com/tm-526-vanilla
                                     </div>                               
                                     <div class="col-md-12">
                                         <fieldset>
-                                            <button type="submit" id="form-submit" value="Send" class="btn">contattaci subito</button>
+                                            <button type="submit" id="form-submit" onclick="sendmail()" class="btn">contattaci per email</button>
                                         </fieldset>      
                                     </div>
                                 </div>
@@ -233,7 +233,7 @@ https://templatemo.com/tm-526-vanilla
             document.getElementById(cityName).style.display = "block";  
         }
 
-        $('#contact').submit(function () {
+        function sendmail() {
             var xmlHttp = new XMLHttpRequest();
             var mailto = "&mailto=" + document.getElementById("email").value;
             var testo = "&testo=" + " Ecco il recap del tuo messaggio : " + document.getElementById("message").value;
