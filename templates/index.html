@@ -1,4 +1,4 @@
-+<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -160,7 +160,7 @@ https://templatemo.com/tm-526-vanilla
                                     </div>                               
                                     <div class="col-md-12">
                                         <fieldset>
-                                            <button onclick="sendmail()" class="btn">contattaci per email</button>
+                                            <button onclick="sendmail()" style="focus:background:green;" class="btn"><p id="tastomail">contattaci per email</p><div id="loadingmail" hidden="true" class="spinner-grow text-primary" role="status"><span class="sr-only">Loading...</span></div></button>                                            
                                         </fieldset>      
                                     </div>
                                 </div>
@@ -173,7 +173,7 @@ https://templatemo.com/tm-526-vanilla
                                 <div class="row">             
                                     <div class="col-md-12">
                                       <fieldset>
-                                        <button type="submit" id="form-submit" onclick="window.open('tel:3927560000');" class="btn">chiamaci per telefono</button>
+                                        <button  type="submit" id="form-submit" onclick="window.open('tel:3927560000');" class="btn"><p>  chiamaci per telefono  </p></button>
                                       </fieldset>
                                     </div>
                                 </div>
@@ -186,7 +186,7 @@ https://templatemo.com/tm-526-vanilla
                                 <div class="row">             
                                     <div class="col-md-12">
                                       <fieldset>
-                                        <button type="submit" id="form-submit" onclick="window.open('https://vetere.tech/chatbot');" class="btn">Parla con il nostro BOT</button>
+                                        <button type="submit" id="form-submit" onclick="window.open('https://vetere.tech/chatbot');" class="btn"><p>Parla con il nostro BOT</p></button>
                                       </fieldset>
                                     </div>
                                 </div>
@@ -244,36 +244,37 @@ https://templatemo.com/tm-526-vanilla
 
         function sendmail() {
             
-            document.getElementById("contact-us").innerHTML = '<div class="spinner-grow text-primary" role="status"><span class="sr-only">Loading...</span></div>';
-
-            var xmlHttp = new XMLHttpRequest();
-            var mailto = "&mailto=" + document.getElementById("email").value;
-            var testo = "&testo=" + " Ecco il recap del tuo messaggio : " + document.getElementById("message").value;
-            var oggetto = "&oggetto=" + "Grazie per averci contattato : " + document.getElementById("name").value;
-
-            xmlHttp.open( "GET", "https://vetere.tech/sendmail?"+mailto+testo+oggetto, false ); // false for synchronous request
-            xmlHttp.send( null );
+            document.getElementById("tastomail").hidden = true;
+            document.getElementById("loadingmail").hidden = false;
 
             try {
-                resendmail();
+
+                if(document.getElementById("email").value != ""){
+
+                    var xmlHttp = new XMLHttpRequest();
+                    var mailto = "&mailto=" + document.getElementById("email").value;
+                    var testo = "&testo=" + " Ecco il recap del tuo messaggio : " + document.getElementById("message").value;
+                    var oggetto = "&oggetto=" + "Grazie per averci contattato : " + document.getElementById("name").value;
+
+                    xmlHttp.open( "GET", "https://vetere.tech/sendmail?"+mailto+testo+oggetto, true ); // false for synchronous request
+                    xmlHttp.send( null );
+
+                    var xmlHttp = new XMLHttpRequest();
+                    var mailto = "&mailto=simoneveterex@gmail.com";
+                    var testo = "&testo=" + " Ecco il recap del suo messaggio : " + document.getElementById("message").value;
+                    var oggetto = "&oggetto=" + "Richiesta di contatto da : " + document.getElementById("name").value;
+
+                    xmlHttp.open( "GET", "https://vetere.tech/sendmail?"+mailto+testo+oggetto, true ); // false for synchronous request
+                    xmlHttp.send( null );
+                }
+
+                window.location.href = "https://www.vetere.tech/paginadicortesia";
             } catch (error) {
                 console.error(error);
             }
 
-            window.location.href = "https://www.vetere.tech/paginadicortesia";
 
             return xmlHttp.responseText;
-        }
-
-        function resendmail() {
-
-            var xmlHttp = new XMLHttpRequest();
-            var mailto = "&mailto=simoneveterex@gmail.com";
-            var testo = "&testo=" + " Ecco il recap del suo messaggio : " + document.getElementById("message").value;
-            var oggetto = "&oggetto=" + "mail inviata a : " + document.getElementById("email").value + "Grazie per averci contattato : " + document.getElementById("name").value;
-
-            xmlHttp.open( "GET", "https://vetere.tech/sendmail?"+mailto+testo+oggetto, false ); // false for synchronous request
-            xmlHttp.send( null );
         }
     </script>
 
