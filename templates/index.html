@@ -35,7 +35,9 @@ Vanilla Template
 https://templatemo.com/tm-526-vanilla
 -->
 <body>
-
+    <iframe hidden="true" id="frame-chatbot" style="position: fixed;bottom: 2%;right: 2%;border-radius: 20px;z-index: 11;" src="https://vetere.tech/chatbot" width="80%" height="90%" frameborder="0" name="chat-iframe"></iframe>
+    <img onclick="document.getElementById('frame-chatbot').hidden = !document.getElementById('frame-chatbot').hidden;document.getElementById('close').hidden = !document.getElementById('close').hidden" style="position: fixed;z-index: 10;right: 0px;bottom: 0px;" src="https://raw.githubusercontent.com/simonevetere/vetere.tech-ads/main/templates/img/chat.png">
+    <img id="close" hidden="true" onclick="document.getElementById('frame-chatbot').hidden = !document.getElementById('frame-chatbot').hidden;document.getElementById('close').hidden = !document.getElementById('close').hidden" style="position: fixed;z-index: 12;right: 5%;bottom: 85%;" src="https://raw.githubusercontent.com/simonevetere/vetere.tech-ads/main/templates/img/close.png">
     <div class="fixed-side-navbar">
         <ul class="nav flex-column">
             <li class="nav-item"><a class="nav-link" href="#home"><span>Intro</span></a></li>
@@ -179,7 +181,7 @@ https://templatemo.com/tm-526-vanilla
                                 </div>
                             </form>
                         </div>
-                    </div>
+                    </div>                  
                     <div class="contact-form">
                         <div class="row">
                             <form id="contact">
